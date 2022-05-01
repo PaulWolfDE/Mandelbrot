@@ -4,5 +4,5 @@
 
 ```
 $ mkdir out
-$ go run zoom.go [image width] [image height] [x offset] [y offset] [zoom stats] [scale factor]
+$ go run zoom.go [image width] [image height] [x offset] [y offset] [zoom iterations] [scale factor]
 ```
