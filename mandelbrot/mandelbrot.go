@@ -1,6 +1,7 @@
 package mandelbrot
 
 import (
+	hslcolor "github.com/gerow/go-color"
 	"image/color"
 	"math/cmplx"
 )
@@ -58,12 +59,12 @@ func Mandelbrot(z complex128) color.RGBA {
 
 			// HSL
 			if ColorScheme == 4 {
-				c := HSL{float64((contrast/4*n)%360) / 360, .25 + float64(n)/float64(Iterations)/2, .5}.ToRGB()
+				c := hslcolor.HSL{H: float64((contrast/4*n)%360) / 360, S: .25 + float64(n)/float64(Iterations)/2, L: .5}.ToRGB()
 				return color.RGBA{R: uint8(c.R * 255), G: uint8(c.G * 255), B: uint8(c.B * 255), A: 255}
 			}
 
 			if ColorScheme == 5 {
-				c := HSL{float64((contrast/4*n)%360) / 360, .5, .5}.ToRGB()
+				c := hslcolor.HSL{H: float64((contrast/4*n)%360) / 360, S: .5, L: .5}.ToRGB()
 				return color.RGBA{R: uint8(c.R * 255), G: uint8(c.G * 255), B: uint8(c.B * 255), A: 255}
 			}
 
