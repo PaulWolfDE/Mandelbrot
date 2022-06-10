@@ -13,7 +13,7 @@ $ go get -v github.com/gerow/go-color
 
 ### Rendering image
 ```sh
-$ go run mandelbrot.go [image width] [image height] [scale factor] [offset x] [offset y] [formula iterations] [color scheme] > mandelbrot.png
+$ go run image.go [image width] [image height] [scale factor] [offset x] [offset y] [formula iterations] [color scheme] > mandelbrot.png
 ```
 
 ### Rendering zoom with multiple images
