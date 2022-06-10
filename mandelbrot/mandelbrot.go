@@ -58,9 +58,15 @@ func Mandelbrot(z complex128) color.RGBA {
 
 			// HSL
 			if ColorScheme == 4 {
-				c := HSL{float64((contrast/4*n)%360) / 360, .5, .5}.ToRGB()
-				return color.RGBA{uint8(c.R * 255), uint8(c.G * 255), uint8(c.B * 255), 255}
+				c := HSL{float64((contrast/4*n)%360) / 360, .25 + float64(n)/float64(Iterations)/2, .5}.ToRGB()
+				return color.RGBA{R: uint8(c.R * 255), G: uint8(c.G * 255), B: uint8(c.B * 255), A: 255}
 			}
+
+			if ColorScheme == 5 {
+				c := HSL{float64((contrast/4*n)%360) / 360, .5, .5}.ToRGB()
+				return color.RGBA{R: uint8(c.R * 255), G: uint8(c.G * 255), B: uint8(c.B * 255), A: 255}
+			}
+
 			// return color.RGBA{uint8(255 - contrast*1/2*n), uint8(255 - contrast*1/3*n), uint8(255 - contrast*n), 255}
 			return color.RGBA{}
 		}

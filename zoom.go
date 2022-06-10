@@ -55,7 +55,7 @@ func main() {
 				img.Set(px, py, mandelbrot.Mandelbrot(z))
 			}
 		}
-		f, err := os.Create(fmt.Sprintf("./out/frame%d.png", i+1))
+		f, err := os.Create(fmt.Sprintf("./out/frame%06d.png", i+1))
 		if err != nil {
 			panic(err)
 		}
