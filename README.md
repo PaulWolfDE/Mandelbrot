@@ -1,7 +1,5 @@
 # Mandelbrot
 
-[<img src="https://img.shields.io/badge/License-GPL 3-important.svg">](https://gnu.org/licenses/gpl-3.0.html)
-
 ## Install
 
 ```sh
@@ -35,4 +33,10 @@ $ open video.mp4
 
 ## Credits
 
-- [HSL Color](https://github.com/gerow/go-color)
+- Initial code derived from [The Go Programming Language](https://github.com/adonovan/gopl.io/) by Alan A. A. Donovan and Brian W. Kernighan
+- Used library [HSL Color](https://github.com/gerow/go-color) by Gerow
+
+## License
+
+[<img src="https://img.shields.io/badge/License-GPL 3-important.svg">](https://gnu.org/licenses/gpl-3.0.html)
+(Derived from gopl's [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/))
